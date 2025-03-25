@@ -3358,7 +3358,7 @@ var context = new AudioContext();
                     mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara kami
                 </p>
                 <br>
-                <button id="btn_open" class="button-black" style="margin: 0 auto; width: 60%; border-radius: 5px;"
+                <button id="btn_open" class="button-black" onclick="scrollToTop()" style="margin: 0 auto; width: 60%; border-radius: 5px;"
                     type="button" class="" data-keyboard="false">
                     Buka Undangan
                 </button>
@@ -3878,124 +3878,7 @@ var context = new AudioContext();
 </style>
 
 
-<div class="fix-menu bg-primary" id="menu_id" style="max-width: 500px; ">
-        <div>
 
-        <div class="flex justify-around grid-container cursor-pointer">
-
-
-            
-            
-            
-
-            
-
-
-            
-            <div id="icon1" class="item1" onclick="scrollToHome()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                        width: 20px;
-                        padding-top: 4px;
-                    " src="/nikah/home.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-
-            
-            <div id="icon2" class="item1" onclick="scrollToUcapan()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img id="menu-kehadiran-bawah" style="
-                        width: 25px;
-                        padding-top: 2px
-                    " src="/nikah/people.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-            
-                        <div id="icon3" class="item1" onclick="scrollToGalery()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                       width: 22px;
-                        padding-top: 4px;
-                    " src="/nikah/picture.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-            
-
-
-
-            
-            <div id="icon4" class="item1" onclick="scrollToMap()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                            width: 20px;
-                            padding-top: 4px;
-                    " src="/nikah/map.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-            
-                        
-
-
-
-            
-                        
-
-
-
-            
-            <div id="icon7" class="item1">
-                <div style="width: 100%;">
-                    <div id="volume" style="background-color: #4970ea;
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                        width: 25px;
-                            padding-top: 4px;
-                            padding-left: 2px;
-                    " src="/nikah/sound.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-            
-
-        
-        </div>
-    </div>
-</div>
                         <!-- jQuery -->
 <script src="https://indoinvite.com/nikah/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
@@ -4289,6 +4172,10 @@ $('#auto_scroll').on('click', function(e) {
             $('#'+modalId).hide();
             toEdit1(modalId)
         }, 250);
+    }
+
+    function scrollToTop() {
+        document.querySelector('#page').scrollIntoView({behavior: 'smooth'});
     }
 
     function registrasiRe() {
